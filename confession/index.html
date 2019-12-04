@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title></title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="theme-color" content="#000">
+  <meta name="msapplication-navbutton-color" content="#000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="icon" sizes="192x192" href="ico.png">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="update()">
+  <div class="center">
+    <canvas id="canvas" width="1600" height="2000"></canvas>
+    <input type="color" id="textcolor" value="#333333" onchange="update()">
+    <input type="color" id="bgcolor" value="#ffdd00" onchange="update()">
+    <textarea name="maintext" id="maintext" rows="20" cols="36" wrap="hard" placeholder="confession" onkeyup="update()" required></textarea>
+    <textarea name="sign" id="sign" rows="1" cols="24" wrap="hard" placeholder="sign" onkeyup="update()" required></textarea>
+  </div>
+
+  <script type="text/javascript">
+    var canvas = document.getElementById('canvas');
+    var dataURL = canvas.toDataURL('image/jpeg', 1.0);
+    var ctx = canvas.getContext('2d');
+    ctx.font = "60px monospace";
+
+    function changebg() {
+      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      ctx.fillStyle = document.getElementById('bgcolor').value;
+      ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      ctx.fillStyle = document.getElementById('textcolor').value;
+      ctx.fill();
+    }
+
+    function changemaintext() {
+      ctx.fillText(document.getElementById('maintext').value, 200, 300, 1200);
+    }
+
+    function update() {
+      //context.save()
+      // changebg();
+      // changemaintext();
+      //context.restore()
+      // ctx.fillStyle = "#00000000";
+      // ctx.fill();
+      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      ctx.fillStyle = document.getElementById('bgcolor').value;
+      ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      ctx.fillStyle = document.getElementById('textcolor').value;
+      ctx.fillText(document.getElementById('maintext').value, 200, 300, 1200);
+      ctx.fillText(document.getElementById('sign').value, 200, 1750, 800);
+      // ctx.fill();
+    }
+
+    function getdataurl() {
+      console.log(dataURL);
+      alert(dataURL);
+    }
+  </script>
+</body>
+
+</html>

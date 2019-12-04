@@ -1,0 +1,7 @@
+
+'.html.text':
+  'HTML':
+    'prefix': 'html'
+    'body': '<!DOCTYPE html>\n<html lang="${1:en}" dir="${2:ltr}">\n\t<head>\n\t\t<meta charset="utf-8">\n\t\t<title>$3</title>\n\t</head>\n\t<body>\n\t\t$4\n\t</body>\n</html>'
+
+    'body': '<!DOCTYPE html>\n<html lang="en">\n\n\t<head>\n\n\t\t<meta charset="utf-8">\n\t\t<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n\t\t<meta name="description" content="">\n\t\t<meta name="author" content="">\n\t\t<meta name="theme-color" content="#000">\n\t\t<meta name="msapplication-navbutton-color" content="#000">\n\t\t<meta name="apple-mobile-web-app-status-bar-style" content="#000">\n\t\t<meta name="apple-mobile-web-app-capable" content="yes">\n\t\t<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">\n\n\t\t<link rel="icon" sizes="192x192" href="ico.png">\n\t\t<title>$1</title>\n\n\t</head>\n\n\t<body>\n\n\t</body>\n\n</html>'

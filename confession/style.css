@@ -16,7 +16,7 @@ body {
   margin: auto;
 }
 
-input, textarea {
+input, textarea, button {
   position: absolute;
 }
 
@@ -31,17 +31,25 @@ textarea {
 #bgcolor, #textcolor {
   width: 40px;
   height: 30px;
-  right: 0;
+  top: 0;
   border: none;
   /* outline: none; */
 }
 
 #bgcolor {
-  bottom: 0;
+  left: 0;
 }
 
 #textcolor {
-  bottom: 30px;
+  left: 40px;
+}
+
+button {
+  right: 0;
+  background-color: #ffffff77;
+  font-size: 20px;
+  padding: 4px 8px;
+  border: none
 }
 
 #maintext {
@@ -51,9 +59,10 @@ textarea {
 }
 
 #sign {
-  top: calc((125vw*1750/2000) - (125vw*60/2000));
+  top: calc((125vw*1700/2000) - (125vw*50/2000));
   left: calc(100vw*200/1600);
   width: calc(100vw*800/1600);
+  font-size: calc(50/2000*125vw);
 }
 
 textarea::placeholder, textarea::selection {
@@ -82,8 +91,9 @@ canvas, .center {
   }
 
   #sign {
-    top: calc((100vh*1750/2000) - (100vh*60/2000));
+    top: calc((100vh*1700/2000) - (100vh*50/2000));
     left: calc(80vh*200/1600);
     width: calc(80vh*800/1600);
+    font-size: calc(50/2000*100vh);
   }
 }

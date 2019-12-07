@@ -1,14 +1,35 @@
+:root {
+  --bgcolor: #ffdd00;
+  --textcolor: #333333;
+  --canvas-width: 1600;
+  --canvas-height: 2000;
+  --font-size-1: 60;
+  --font-size-2: 50;
+  --font-size-3: 40;
+  --width: 100vw;
+  --height: 125vw;
+}
+
+@media (min-aspect-ratio: 4/5) {
+  :root {
+    --width: 80vh;
+    --height: 100vh;
+  }
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: calc(60/2000*125vw);
+  font-size: calc(var(--font-size-1)/var(--canvas-height)*var(--height));
   font-family: monospace;
   overflow: hidden;
 }
 
 body {
   width: 100%;
+  /* background-color: var(--bgcolor); */
+  background-color: white;
 }
 
 .center {
@@ -16,14 +37,25 @@ body {
   margin: auto;
 }
 
+canvas, .center {
+  width: var(--width);
+  height: var(--height);
+}
+
 input, textarea, button {
   position: absolute;
+}
+
+textarea::placeholder, textarea::selection {
+  color: var(--textcolor);
+  opacity: 1;
 }
 
 textarea {
   resize: none;
   background-color: rgba(0, 0, 0, 0);
-  color: rgba(0, 0, 0, 0.05);
+  color: var(--textcolor);
+  opacity: 0.3;
   border: none;
   outline: none;
 }
@@ -53,47 +85,14 @@ button {
 }
 
 #maintext {
-  top: calc((125vw*300/2000) - (125vw*60/2000));
-  left: calc(100vw*200/1600);
-  width: calc(100vw*1200/1600);
+  top: calc((var(--height)*300/var(--canvas-height)) - (var(--height)*var(--font-size-1)/var(--canvas-height)));
+  left: calc(var(--width)*200/var(--canvas-width));
+  width: calc(var(--width)*1200/var(--canvas-width));
 }
 
 #sign {
-  top: calc((125vw*1700/2000) - (125vw*50/2000));
-  left: calc(100vw*200/1600);
-  width: calc(100vw*800/1600);
-  font-size: calc(50/2000*125vw);
-}
-
-textarea::placeholder, textarea::selection {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-canvas, .center {
-  width: 100vw;
-  height: 125vw;
-}
-
-@media (min-aspect-ratio: 4/5) {
-  *, *::after, *::before {
-    font-size: calc(60/2000*100vh);
-  }
-
-  canvas, .center {
-    width: 80vh;
-    height: 100vh;
-  }
-
-  #maintext {
-    top: calc((100vh*300/2000) - (100vh*60/2000));
-    left: calc(80vh*200/1600);
-    width: calc(80vh*1200/1600);
-  }
-
-  #sign {
-    top: calc((100vh*1700/2000) - (100vh*50/2000));
-    left: calc(80vh*200/1600);
-    width: calc(80vh*800/1600);
-    font-size: calc(50/2000*100vh);
-  }
+  top: calc((var(--height)*1700/var(--canvas-height)) - (var(--height)*var(--font-size-2)/var(--canvas-height)));
+  left: calc(var(--width)*200/var(--canvas-width));
+  width: calc(var(--width)*800/var(--canvas-width));
+  font-size: calc(var(--font-size-2)/var(--canvas-height)*var(--height));
 }

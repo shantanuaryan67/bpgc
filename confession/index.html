@@ -19,7 +19,7 @@
   <link rel="icon" sizes="192x192" href="ico.png">
   <link rel="stylesheet" href="style.css">
 
-  <base href="https://shantanuaryan67.github.io/bpgc/confession/">
+  <!-- <base href="https://shantanuaryan67.github.io/bpgc/confession/"> -->
 
 </head>
 
@@ -28,8 +28,8 @@
     <canvas id="canvas" width="1600" height="2000"></canvas>
     <input type="color" id="textcolor" value="#333333" onchange="update()">
     <input type="color" id="bgcolor" value="#ffdd00" onchange="update()">
-    <textarea name="maintext" id="maintext" rows="20" cols="36" wrap="hard" placeholder="confession" oninput="update()" required></textarea>
-    <textarea name="sign" id="sign" rows="1" cols="24" wrap="hard" placeholder="sign" oninput="update()" required></textarea>
+    <textarea name="maintext" id="maintext" rows="21" cols="36" maxlength="756" wrap="hard" placeholder="hahahah" oninput="update()" required></textarea>
+    <textarea name="sign" id="sign" rows="1" cols="24" maxlength="24" wrap="hard" placeholder="sign" oninput="update()" required></textarea>
     <button type="button" name="confess" onclick="getdataurl()">POST</button>
   </div>
 

@@ -8,6 +8,7 @@
   --font-size-3: 40;
   --width: 100vw;
   --height: 125vw;
+  --calculated-default-fontsize-60: calc(var(--font-size-1)/var(--canvas-height)*var(--height)); /*60/2000*heifht*/
 }
 
 @media (min-aspect-ratio: 4/5) {
@@ -24,12 +25,14 @@
   font-size: calc(var(--font-size-1)/var(--canvas-height)*var(--height));
   font-family: monospace;
   overflow: hidden;
+  line-height: 1.1;
 }
 
 body {
   width: 100%;
-  /* background-color: var(--bgcolor); */
-  background-color: white;
+  /* background-color: var(--textcolor); */
+  background: linear-gradient(180deg, var(--textcolor) -10%, #ffffff00 10%, #ffffff00 90%, var(--bgcolor) 110%);
+  /* background-color: white; */
 }
 
 .center {
@@ -55,7 +58,7 @@ textarea {
   resize: none;
   background-color: rgba(0, 0, 0, 0);
   color: var(--textcolor);
-  opacity: 0.3;
+  opacity: 0.5;
   border: none;
   outline: none;
 }

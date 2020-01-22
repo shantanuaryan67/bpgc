@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>Table Tennis</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="keep a track of your scores with this osum-posum website">
+    <meta name="author" content="Aryan">
+
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="icon" sizes="192x192" href="ico.png">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+    <div id="left" onclick="add('left')">0</div>
+    <div id="right" onclick="add('right')">0</div>
+
+    <script type="text/javascript">
+      function add(team) {
+        document.getElementById(team).innerHTML = parseInt(document.getElementById(team).innerHTML) + 1;
+      }
+    </script>
+  </body>
+
+</html>

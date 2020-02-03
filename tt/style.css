@@ -2,17 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  display: inline-block;
 }
 
 #left, #right {
-  height: 100%;
+  height: 80%;
   width: 49.5%;
-  display: inline-block;
   position: absolute;
   top: 0;
-  font-size: 85vh;
+  font-size: 64vmin;
   text-align: center;
 }
 
@@ -26,4 +24,27 @@
   right: 0.3%;
   background-color: #0000ff77;
   color: #0000ff77;
+}
+
+#left-1, #reset, #right-1 {
+  background-color: #77777777;
+  color: #77777777;
+  height: 19%;
+  width: 32%;
+  position: absolute;
+  bottom: 0;
+  font-size: 16vmin;
+  text-align: center;
+}
+
+#left-1 {
+  left: 0.3%;
+}
+
+#reset {
+  left: 34%;
+}
+
+#right-1 {
+  right: 0.3%;
 }

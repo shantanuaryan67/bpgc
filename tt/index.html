@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <title>Table Tennis</title>
+  <title>Table Tennis</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="keep a track of your scores with this osum-posum website">
-    <meta name="author" content="Aryan">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="keep a track of your scores with this osum-posum website">
+  <meta name="author" content="Aryan">
 
-    <meta name="theme-color" content="#000">
-    <meta name="msapplication-navbutton-color" content="#000">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000">
+  <meta name="msapplication-navbutton-color" content="#000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="icon" sizes="192x192" href="ico.png">
-    <link rel="stylesheet" href="style.css">
+  <!-- <link rel="icon" sizes="192x192" href="ico.png"> -->
+  <link rel="stylesheet" href="style.css">
 
-  </head>
+  <script>
+    function add(team, score) {
+      document.getElementById(team).innerHTML = parseInt(document.getElementById(team).innerHTML) + score;
+    }
 
-  <body>
-    <div id="left" onclick="add('left')">0</div>
-    <div id="right" onclick="add('right')">0</div>
+    function zero() {
+      document.getElementById("left").innerHTML = "0";
+      document.getElementById("right").innerHTML = "0";
+    }
+  </script>
 
-    <script type="text/javascript">
-      function add(team) {
-        document.getElementById(team).innerHTML = parseInt(document.getElementById(team).innerHTML) + 1;
-      }
-    </script>
-  </body>
+</head>
+
+<body>
+  <div id="left" onclick="add('left',1)">0</div>
+  <div id="right" onclick="add('right',1)">0</div>
+  <div id="left-1" onclick="add('left',-1)">-</div>
+  <div id="reset" onclick="zero()">R</div>
+  <div id="right-1" onclick="add('right',-1)">-</div>
+</body>
 
 </html>

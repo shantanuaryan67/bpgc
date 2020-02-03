@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  display: inline-block;
 }
 
 #left, #right {
@@ -12,6 +11,7 @@
   top: 0;
   font-size: 64vmin;
   text-align: center;
+  display: inline-block;
 }
 
 #left {
@@ -35,6 +35,7 @@
   bottom: 0;
   font-size: 16vmin;
   text-align: center;
+  display: inline-block;
 }
 
 #left-1 {
